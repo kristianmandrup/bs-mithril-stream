@@ -8,10 +8,10 @@ type combinerFn = (array(Stream.t('a)), array(Stream.t('b))) => 'c;
 
 module Stream = {
   type t('a) = {    
-    [@bs.module "mithril/stream"] external end: unit = "";
-    [@bs.module "mithril/stream"] external of: 'a => Stream.t('b) = "stream()[\"fantasy-land/of\"]";
-    [@bs.module "mithril/stream"] external map: (callbackFn) => Stream.t('a) = "stream()[\"fantasy-land/map\"]";
-    [@bs.module "mithril/stream"] external ap: (applyFn) => Stream.t('a) = "stream()[\"fantasy-land/ap\"]";
+    end: unit = "",
+    of: 'a => Stream.t('b),
+    map: (callbackFn) => Stream.t('a),
+    ap: (applyFn) => Stream.t('a)
   };
 };
 
