@@ -6,6 +6,10 @@ Bucklescript bindings for [mithril](https://github.com/MithrilJS/mithril.js) str
 
 mithril-stream can be used with modern state management solutions like [Meiosis](https://meiosis.js.org/) to great effect. No need for Virtual DOMs or other "complex machinery" at this point in time ;)
 
+## Writing bindings
+
+To help write bucklescript bindings for this lib (and hence make it usable from ReasonML) see the [FFI cheatsheet](https://github.com/glennsl/bucklescript-ffi-cheatsheet) and go for it!
+
 ### Install
 
 `npm i bs-mithril-stream`
