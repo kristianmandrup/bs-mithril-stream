@@ -16,14 +16,18 @@ module Stream = {
 };
 
 
-[@bs.module "mithril/stream"] external stream: (~value: 'b, unit) => Stream.t('a) = "Stream";
+[@bs.module "mithril/stream"] 
+external stream: (~value: 'b, unit) => Stream.t('a) = "Stream";
+[@bs.module "mithril/stream"]
 external combine: (combinerFn, array(Stream.t('b))) => Stream.t('a) = "";
 [@bs.module "mithril/stream"]
 external map: ('a => 'c, Stream.t('a)) => Stream.t('c) = "";
-[@bs.module "mithril/stream"] external scan: ('a => 'c, 'd, Stream.t('a)) => 'c = "";
+[@bs.module "mithril/stream"] 
+external scan: ('a => 'c, 'd, Stream.t('a)) => 'c = "";
 [@bs.module "mithril/stream"]
 external merge: array(Stream.t('a)) => Stream.t('a) = "";
 [@bs.module "mithril/stream"]
 external scanMerge: (pairs: 'a, acc: 'c) => Stream.t('a) = "";
-[@bs.module "mithril/stream"] external lifter: (array(Stream.t('a))) => 'c = "";
+[@bs.module "mithril/stream"] 
+external lifter: (array(Stream.t('a))) => 'c = "";
 [@bs.module "mithril/stream"] external lift: (lifterFn, array(Stream.t('a))) => Stream.t('a) = "";
